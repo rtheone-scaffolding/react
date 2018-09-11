@@ -6,10 +6,10 @@ import { createRenderer } from 'fela';
 import { createComponent, Provider } from 'react-fela';
 const renderer = createRenderer();
 
-import sum from './sum.ts';
+import sum from './sum';
 
 const Button = createComponent(
-  props => css`
+  (props: any) => css`
     background: ${props.color};
     color: white;
   `,
@@ -17,7 +17,7 @@ const Button = createComponent(
 );
 
 const AlternateButton = createComponent(
-  props => css`
+  (props: any) => css`
     background: orangered;
   `,
   Button
